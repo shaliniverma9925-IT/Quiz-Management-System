@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="home">
+
+        <div class="quiz-card">
+
+            <div class="icon">🏆</div>
+
+            <h1>Quiz Completed!</h1>
+
+            <p class="subtitle">
+                Here is your performance
+            </p>
+
+            <div class="result-box">
+
+                <p>
+                    <strong>Category:</strong>
+                    {{ category.upper() }}
+                </p>
+
+                <p>
+                    <strong>Difficulty:</strong>
+                    {{ difficulty.upper() }}
+                </p>
+
+                <p>
+                    <strong>Total Questions:</strong>
+                    {{ total }}
+                </p>
+
+                <p>
+                    <strong>Correct Answers:</strong>
+                    {{ score }}
+                </p>
+
+                <p>
+                    <strong>Wrong Answers:</strong>
+                    {{ total - score }}
+                </p>
+
+                <h2>
+                    {{ "%.1f"|format(percentage) }}%
+                </h2>
+
+            </div>
+
+            {% if percentage >= 80 %}
+
+                <p>🌟 Excellent Performance!</p>
+
+            {% elif percentage >= 60 %}
+
+                <p>👏 Good Performance!</p>
+
+            {% elif percentage >= 40 %}
+
+                <p>👍 You Passed!</p>
+
+            {% else %}
+
+                <p>📚 You Need More Practice.</p>
+
+            {% endif %}
+
+            <a href="/category" class="start-btn">
+                Take Another Quiz 🔄
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

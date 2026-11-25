@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #6a11cb,
+        #2575fc,
+        #00c6ff
+    );
+}
+
+.quiz-card {
+    width: 520px;
+    padding: 50px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+
+    color: white;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+.categories span {
+    padding: 10px 15px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+button {
+    padding: 15px 40px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: white;
+    color: #2575fc;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.start-btn {
+    display: inline-block;
+    padding: 15px 40px;
+
+    background: white;
+    color: #2575fc;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+.result-box {
+    margin: 25px 0;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    text-align: left;
+}
+
+.result-box p {
+    margin: 10px 0;
+}
+
+.result-box h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}

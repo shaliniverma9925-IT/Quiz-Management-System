@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="home">
+
+        <div class="quiz-card">
+
+            <div class="icon">🧠</div>
+
+            <h1>Quiz Master</h1>
+
+            <p class="subtitle">
+                Test your knowledge. Challenge yourself.
+            </p>
+
+            <div class="categories">
+                <span>🐍 Python</span>
+                <span>⚙️ C++</span>
+                <span>☕ Java</span>
+                <span>🗄️ DBMS</span>
+                <span>🧩 DSA</span>
+            </div>
+
+           
+            <a href="/category" class="start-btn">
+              Start Quiz 🚀
+         </a>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

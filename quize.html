@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="home">
+
+        <div class="quiz-card">
+
+            <div class="icon">🧠</div>
+
+            <p class="subtitle">
+                Question {{ question_number }} of {{ total_questions }}
+            </p>
+
+            <h1>{{ question.question }}</h1>
+
+            
+         <form method="POST">
+
+    <div class="quiz-options">
+
+        {% for option in question.options %}
+
+        <label class="option">
+            <input type="radio"
+                   name="answer"
+                   value="{{ option }}"
+                   required>
+
+            {{ loop.index }}. {{ option }}
+        </label>
+
+        {% endfor %}
+
+    </div>
+
+    <button type="submit" class="next-btn">
+
+        {% if question_number == total_questions %}
+            Submit Quiz 🎯
+        {% else %}
+            Next →
+        {% endif %}
+
+    </button>
+
+</form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

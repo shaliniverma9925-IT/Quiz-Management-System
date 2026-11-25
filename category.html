@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Category</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="home">
+
+        <div class="quiz-card">
+
+            <h1>Choose Your Category</h1>
+
+            <p class="subtitle">
+                Select a subject to begin your quiz
+            </p>
+<div class="categories">
+
+    <a href="/difficulty/python" class="category-card">
+        🐍 Python
+    </a>
+
+    <a href="/difficulty/cpp" class="category-card">
+        ⚙️ C++
+    </a>
+
+    <a href="/difficulty/java" class="category-card">
+        ☕ Java
+    </a>
+
+    <a href="/difficulty/dbms" class="category-card">
+        🗄️ DBMS
+    </a>
+
+    <a href="/difficulty/dsa" class="category-card">
+        🧩 DSA
+    </a>
+
+</div>
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Select Difficulty</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="home">
+
+        <div class="quiz-card">
+
+            <div class="icon"></div>
+
+            <h1>Select Difficulty</h1>
+
+            <p class="subtitle">
+                Choose your challenge level
+            </p>
+<div class="categories">
+
+    <a href="/quiz/{{ category }}/easy" class="category-card">
+        🟢 Easy
+        <small>Beginner</small>
+    </a>
+
+    <a href="/quiz/{{ category }}/medium" class="category-card">
+        🟡 Medium
+        <small>Intermediate</small>
+    </a>
+
+    <a href="/quiz/{{ category }}/hard" class="category-card">
+        🔴 Hard
+        <small>Advanced</small>
+    </a>
+
+</div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
